@@ -1,4 +1,4 @@
-#Frequently asked questions about AISAIC.
+Frequently asked questions about AISAIC.
 
 == Installation ==
 
