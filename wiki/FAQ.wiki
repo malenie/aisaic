@@ -1,0 +1,13 @@
+#Frequently asked questions about AISAIC.
+
+== Installation ==
+
+1. Which platforms are supported by AISAIC? And what are the system requirements?
+
+AISAIC runs on Windows, Linux, and Mac OS. Java SE 7.0 or above is required. The system memory is 4 GB or above.
+
+== Input data ==
+
+2. What input data are supported by AISAIC?
+
+AISAIC can take CEL files as input.
