@@ -120,7 +120,9 @@ public class AisaicGUI extends javax.swing.JFrame {
         jMenuFile = new javax.swing.JMenu();
         jMenuItemExit = new javax.swing.JMenuItem();
         jMenuView = new javax.swing.JMenu();
-        jMenuGenomeWideViz = new javax.swing.JMenu();
+        jMenuItemSingleChrViz = new javax.swing.JMenuItem();
+        jMenuItemGenomeWideViz = new javax.swing.JMenuItem();
+        jMenuMultipleChrViz = new javax.swing.JMenu();
         jMenuItemChr1 = new javax.swing.JMenuItem();
         jMenuItemChr2 = new javax.swing.JMenuItem();
         jMenuItemChr3 = new javax.swing.JMenuItem();
@@ -143,7 +145,6 @@ public class AisaicGUI extends javax.swing.JFrame {
         jMenuItemChr20 = new javax.swing.JMenuItem();
         jMenuItemChr21 = new javax.swing.JMenuItem();
         jMenuItemChr22 = new javax.swing.JMenuItem();
-        jMenuItemSingleChrViz = new javax.swing.JMenuItem();
         JMenuHelp = new javax.swing.JMenu();
         jMenuItemAbout = new javax.swing.JMenuItem();
 
@@ -721,186 +722,6 @@ public class AisaicGUI extends javax.swing.JFrame {
 
         jMenuView.setText("Visualization");
 
-        jMenuGenomeWideViz.setText("Genome-wide analysis");
-
-        jMenuItemChr1.setText("Chromosome 1");
-        jMenuItemChr1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItemChr1ActionPerformed(evt);
-            }
-        });
-        jMenuGenomeWideViz.add(jMenuItemChr1);
-
-        jMenuItemChr2.setText("Chromosome 2");
-        jMenuItemChr2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItemChr2ActionPerformed(evt);
-            }
-        });
-        jMenuGenomeWideViz.add(jMenuItemChr2);
-
-        jMenuItemChr3.setText("Chromosome 3");
-        jMenuItemChr3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItemChr3ActionPerformed(evt);
-            }
-        });
-        jMenuGenomeWideViz.add(jMenuItemChr3);
-
-        jMenuItemChr4.setText("Chromosome 4");
-        jMenuItemChr4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItemChr4ActionPerformed(evt);
-            }
-        });
-        jMenuGenomeWideViz.add(jMenuItemChr4);
-
-        jMenuItemChr5.setText("Chromosome 5");
-        jMenuItemChr5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItemChr5ActionPerformed(evt);
-            }
-        });
-        jMenuGenomeWideViz.add(jMenuItemChr5);
-
-        jMenuItemChr6.setText("Chromosome 6");
-        jMenuItemChr6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItemChr6ActionPerformed(evt);
-            }
-        });
-        jMenuGenomeWideViz.add(jMenuItemChr6);
-
-        jMenuItemChr7.setText("Chromosome 7");
-        jMenuItemChr7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItemChr7ActionPerformed(evt);
-            }
-        });
-        jMenuGenomeWideViz.add(jMenuItemChr7);
-
-        jMenuItemChr8.setText("Chromosome 8");
-        jMenuItemChr8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItemChr8ActionPerformed(evt);
-            }
-        });
-        jMenuGenomeWideViz.add(jMenuItemChr8);
-
-        jMenuItemChr9.setText("Chromosome 9");
-        jMenuItemChr9.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItemChr9ActionPerformed(evt);
-            }
-        });
-        jMenuGenomeWideViz.add(jMenuItemChr9);
-
-        jMenuItemChr10.setText("Chromosome 10");
-        jMenuItemChr10.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItemChr10ActionPerformed(evt);
-            }
-        });
-        jMenuGenomeWideViz.add(jMenuItemChr10);
-
-        jMenuItemChr11.setText("Chromosome 11");
-        jMenuItemChr11.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItemChr11ActionPerformed(evt);
-            }
-        });
-        jMenuGenomeWideViz.add(jMenuItemChr11);
-
-        jMenuItemChr12.setText("Chromosome 12");
-        jMenuItemChr12.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItemChr12ActionPerformed(evt);
-            }
-        });
-        jMenuGenomeWideViz.add(jMenuItemChr12);
-
-        jMenuItemChr13.setText("Chromosome 13");
-        jMenuItemChr13.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItemChr13ActionPerformed(evt);
-            }
-        });
-        jMenuGenomeWideViz.add(jMenuItemChr13);
-
-        jMenuItemChr14.setText("Chromosome 14");
-        jMenuItemChr14.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItemChr14ActionPerformed(evt);
-            }
-        });
-        jMenuGenomeWideViz.add(jMenuItemChr14);
-
-        jMenuItemChr15.setText("Chromosome 15");
-        jMenuItemChr15.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItemChr15ActionPerformed(evt);
-            }
-        });
-        jMenuGenomeWideViz.add(jMenuItemChr15);
-
-        jMenuItemChr16.setText("Chromosome 16");
-        jMenuItemChr16.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItemChr16ActionPerformed(evt);
-            }
-        });
-        jMenuGenomeWideViz.add(jMenuItemChr16);
-
-        jMenuItemChr17.setText("Chromosome 17");
-        jMenuItemChr17.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItemChr17ActionPerformed(evt);
-            }
-        });
-        jMenuGenomeWideViz.add(jMenuItemChr17);
-
-        jMenuItemChr18.setText("Chromosome 18");
-        jMenuItemChr18.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItemChr18ActionPerformed(evt);
-            }
-        });
-        jMenuGenomeWideViz.add(jMenuItemChr18);
-
-        jMenuItemChr19.setText("Chromosome 19");
-        jMenuItemChr19.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItemChr19ActionPerformed(evt);
-            }
-        });
-        jMenuGenomeWideViz.add(jMenuItemChr19);
-
-        jMenuItemChr20.setText("Chromosome 20");
-        jMenuItemChr20.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItemChr20ActionPerformed(evt);
-            }
-        });
-        jMenuGenomeWideViz.add(jMenuItemChr20);
-
-        jMenuItemChr21.setText("Chromosome 21");
-        jMenuItemChr21.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItemChr21ActionPerformed(evt);
-            }
-        });
-        jMenuGenomeWideViz.add(jMenuItemChr21);
-
-        jMenuItemChr22.setText("Chromosome 22");
-        jMenuItemChr22.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItemChr22ActionPerformed(evt);
-            }
-        });
-        jMenuGenomeWideViz.add(jMenuItemChr22);
-
-        jMenuView.add(jMenuGenomeWideViz);
-
         jMenuItemSingleChrViz.setText("Single chromosome analysis");
         jMenuItemSingleChrViz.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -908,6 +729,194 @@ public class AisaicGUI extends javax.swing.JFrame {
             }
         });
         jMenuView.add(jMenuItemSingleChrViz);
+
+        jMenuItemGenomeWideViz.setText("Genome-wide analysis");
+        jMenuItemGenomeWideViz.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemGenomeWideVizActionPerformed(evt);
+            }
+        });
+        jMenuView.add(jMenuItemGenomeWideViz);
+
+        jMenuMultipleChrViz.setText("Multiple chromosomes analysis");
+
+        jMenuItemChr1.setText("Chromosome 1");
+        jMenuItemChr1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemChr1ActionPerformed(evt);
+            }
+        });
+        jMenuMultipleChrViz.add(jMenuItemChr1);
+
+        jMenuItemChr2.setText("Chromosome 2");
+        jMenuItemChr2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemChr2ActionPerformed(evt);
+            }
+        });
+        jMenuMultipleChrViz.add(jMenuItemChr2);
+
+        jMenuItemChr3.setText("Chromosome 3");
+        jMenuItemChr3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemChr3ActionPerformed(evt);
+            }
+        });
+        jMenuMultipleChrViz.add(jMenuItemChr3);
+
+        jMenuItemChr4.setText("Chromosome 4");
+        jMenuItemChr4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemChr4ActionPerformed(evt);
+            }
+        });
+        jMenuMultipleChrViz.add(jMenuItemChr4);
+
+        jMenuItemChr5.setText("Chromosome 5");
+        jMenuItemChr5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemChr5ActionPerformed(evt);
+            }
+        });
+        jMenuMultipleChrViz.add(jMenuItemChr5);
+
+        jMenuItemChr6.setText("Chromosome 6");
+        jMenuItemChr6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemChr6ActionPerformed(evt);
+            }
+        });
+        jMenuMultipleChrViz.add(jMenuItemChr6);
+
+        jMenuItemChr7.setText("Chromosome 7");
+        jMenuItemChr7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemChr7ActionPerformed(evt);
+            }
+        });
+        jMenuMultipleChrViz.add(jMenuItemChr7);
+
+        jMenuItemChr8.setText("Chromosome 8");
+        jMenuItemChr8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemChr8ActionPerformed(evt);
+            }
+        });
+        jMenuMultipleChrViz.add(jMenuItemChr8);
+
+        jMenuItemChr9.setText("Chromosome 9");
+        jMenuItemChr9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemChr9ActionPerformed(evt);
+            }
+        });
+        jMenuMultipleChrViz.add(jMenuItemChr9);
+
+        jMenuItemChr10.setText("Chromosome 10");
+        jMenuItemChr10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemChr10ActionPerformed(evt);
+            }
+        });
+        jMenuMultipleChrViz.add(jMenuItemChr10);
+
+        jMenuItemChr11.setText("Chromosome 11");
+        jMenuItemChr11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemChr11ActionPerformed(evt);
+            }
+        });
+        jMenuMultipleChrViz.add(jMenuItemChr11);
+
+        jMenuItemChr12.setText("Chromosome 12");
+        jMenuItemChr12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemChr12ActionPerformed(evt);
+            }
+        });
+        jMenuMultipleChrViz.add(jMenuItemChr12);
+
+        jMenuItemChr13.setText("Chromosome 13");
+        jMenuItemChr13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemChr13ActionPerformed(evt);
+            }
+        });
+        jMenuMultipleChrViz.add(jMenuItemChr13);
+
+        jMenuItemChr14.setText("Chromosome 14");
+        jMenuItemChr14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemChr14ActionPerformed(evt);
+            }
+        });
+        jMenuMultipleChrViz.add(jMenuItemChr14);
+
+        jMenuItemChr15.setText("Chromosome 15");
+        jMenuItemChr15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemChr15ActionPerformed(evt);
+            }
+        });
+        jMenuMultipleChrViz.add(jMenuItemChr15);
+
+        jMenuItemChr16.setText("Chromosome 16");
+        jMenuItemChr16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemChr16ActionPerformed(evt);
+            }
+        });
+        jMenuMultipleChrViz.add(jMenuItemChr16);
+
+        jMenuItemChr17.setText("Chromosome 17");
+        jMenuItemChr17.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemChr17ActionPerformed(evt);
+            }
+        });
+        jMenuMultipleChrViz.add(jMenuItemChr17);
+
+        jMenuItemChr18.setText("Chromosome 18");
+        jMenuItemChr18.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemChr18ActionPerformed(evt);
+            }
+        });
+        jMenuMultipleChrViz.add(jMenuItemChr18);
+
+        jMenuItemChr19.setText("Chromosome 19");
+        jMenuItemChr19.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemChr19ActionPerformed(evt);
+            }
+        });
+        jMenuMultipleChrViz.add(jMenuItemChr19);
+
+        jMenuItemChr20.setText("Chromosome 20");
+        jMenuItemChr20.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemChr20ActionPerformed(evt);
+            }
+        });
+        jMenuMultipleChrViz.add(jMenuItemChr20);
+
+        jMenuItemChr21.setText("Chromosome 21");
+        jMenuItemChr21.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemChr21ActionPerformed(evt);
+            }
+        });
+        jMenuMultipleChrViz.add(jMenuItemChr21);
+
+        jMenuItemChr22.setText("Chromosome 22");
+        jMenuItemChr22.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemChr22ActionPerformed(evt);
+            }
+        });
+        jMenuMultipleChrViz.add(jMenuItemChr22);
+
+        jMenuView.add(jMenuMultipleChrViz);
 
         jMenuBar.add(jMenuView);
 
@@ -955,7 +964,7 @@ public class AisaicGUI extends javax.swing.JFrame {
                     .addComponent(jButton9))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(32, Short.MAX_VALUE))
+                .addContainerGap(36, Short.MAX_VALUE))
         );
 
         pack();
@@ -2230,12 +2239,22 @@ public class AisaicGUI extends javax.swing.JFrame {
     private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
         // TODO add your handling code here:
         String selectedText = String.valueOf(jComboBox2.getSelectedItem());
-        if (selectedText.equals("Single chromosome analysis")) {
-            jMenuGenomeWideViz.setEnabled(false);
-            jMenuItemSingleChrViz.setEnabled(true);
-        } else {
-            jMenuGenomeWideViz.setEnabled(true);
-            jMenuItemSingleChrViz.setEnabled(false);
+        switch (selectedText) {
+            case "Single chromosome analysis":
+                jMenuMultipleChrViz.setEnabled(false);
+                jMenuItemSingleChrViz.setEnabled(true);
+                jMenuItemGenomeWideViz.setEnabled(false);
+                break;
+            case "Genome-wide analysis":
+                jMenuMultipleChrViz.setEnabled(false);
+                jMenuItemSingleChrViz.setEnabled(false);
+                jMenuItemGenomeWideViz.setEnabled(true);
+                break;
+            default:
+                jMenuMultipleChrViz.setEnabled(true);
+                jMenuItemSingleChrViz.setEnabled(false);
+                jMenuItemGenomeWideViz.setEnabled(false);
+                break;
         }
     }//GEN-LAST:event_jComboBox2ActionPerformed
 
@@ -2770,6 +2789,20 @@ public class AisaicGUI extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jMenuItemSingleChrVizActionPerformed
 
+    private void jMenuItemGenomeWideVizActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemGenomeWideVizActionPerformed
+        // TODO add your handling code here:
+        final String DATA_PATH = saicPara.getOutfileDir() + File.separator;
+        final String FIG_PATH = DATA_PATH + "figures" + File.separator;
+          
+        String chr = "genome";
+        String figureFile = FIG_PATH + "AISAIC_genome.png";
+        try {
+            Desktop.getDesktop().open(new File(figureFile));
+        } catch (Exception e) {
+            System.err.println(e.getMessage());
+        }
+    }//GEN-LAST:event_jMenuItemGenomeWideVizActionPerformed
+
     /**
     * @param args the command line arguments
     */
@@ -2830,7 +2863,6 @@ public class AisaicGUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JMenuBar jMenuBar;
     private javax.swing.JMenu jMenuFile;
-    private javax.swing.JMenu jMenuGenomeWideViz;
     private javax.swing.JMenuItem jMenuItemAbout;
     private javax.swing.JMenuItem jMenuItemChr1;
     private javax.swing.JMenuItem jMenuItemChr10;
@@ -2855,7 +2887,9 @@ public class AisaicGUI extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItemChr8;
     private javax.swing.JMenuItem jMenuItemChr9;
     private javax.swing.JMenuItem jMenuItemExit;
+    private javax.swing.JMenuItem jMenuItemGenomeWideViz;
     private javax.swing.JMenuItem jMenuItemSingleChrViz;
+    private javax.swing.JMenu jMenuMultipleChrViz;
     private javax.swing.JMenu jMenuView;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JRadioButton jRadioButton1;
