@@ -1476,10 +1476,14 @@ public class AisaicGUI extends javax.swing.JFrame {
                     String delFile = DATA_PATH + FILE_PREFIX_GENOME + DEL_FILE_SUFFIX;
                     String figureFileName = FIG_PATH + "AISAIC_genome.png";
                     String genome = "genome";
-                    AisaicPlot p = createAisaicPlotObjectFromDataFiles(genome,
-                            ampFile, delFile);
-                    p.plot();
-                    p.saveChartAsPNG(figureFileName);
+                    File af = new File(ampFile);
+                    File df = new File(delFile);
+                    if(af.exists() || df.exists()) {
+                        AisaicPlot p = createAisaicPlotObjectFromDataFiles(genome,
+                                ampFile, delFile);
+                        p.plot();
+                        p.saveChartAsPNG(figureFileName);
+                    }
                 } else if(saicPara.getAnalysisMode() == 1){
                     String[] chrArray = {"1", "2", "3", "4", "5", "6", "7", "8", 
                         "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", 
@@ -1489,10 +1493,14 @@ public class AisaicGUI extends javax.swing.JFrame {
                         String ampFile = DATA_PATH + FILE_PREFIX_CHR + chr + AMP_FILE_SUFFIX;
                         String delFile = DATA_PATH + FILE_PREFIX_CHR + chr + DEL_FILE_SUFFIX;
                         String figureFileName = FIG_PATH + "AISAIC_chr_" + chr + ".png";
-                        AisaicPlot p = createAisaicPlotObjectFromDataFiles(chr,
-                                ampFile, delFile);
-                        p.plot();
-                        p.saveChartAsPNG(figureFileName);
+                        File af = new File(ampFile);
+                        File df = new File(delFile);
+                        if(af.exists() || df.exists()) {
+                            AisaicPlot p = createAisaicPlotObjectFromDataFiles(chr,
+                                    ampFile, delFile);
+                            p.plot();
+                            p.saveChartAsPNG(figureFileName);
+                        }
                     }
                 }
 
@@ -1885,10 +1893,14 @@ public class AisaicGUI extends javax.swing.JFrame {
                 String delFile = DATA_PATH + FILE_PREFIX + DEL_FILE_SUFFIX;
                 String figureFileName = FIG_PATH + "AISAIC_singleChr.png";
                 String chr0 = "";
-                AisaicPlot p = createAisaicPlotObjectFromDataFiles(chr0,
-                        ampFile, delFile);
-                p.plot();
-                p.saveChartAsPNG(figureFileName);                
+                File af = new File(ampFile);
+                File df = new File(delFile);
+                if(af.exists() || df.exists()) {
+                    AisaicPlot p = createAisaicPlotObjectFromDataFiles(chr0,
+                            ampFile, delFile);
+                    p.plot();
+                    p.saveChartAsPNG(figureFileName);       
+                }
             }
              else if(saicPara.getAnalysisMode() == 1){
                 String[] chrArray = {"1", "2", "3", "4", "5", "6", "7", "8", 
@@ -1899,10 +1911,14 @@ public class AisaicGUI extends javax.swing.JFrame {
                     String ampFile = DATA_PATH + FILE_PREFIX_CHR + chr + AMP_FILE_SUFFIX;
                     String delFile = DATA_PATH + FILE_PREFIX_CHR + chr + DEL_FILE_SUFFIX;
                     String figureFileName = FIG_PATH + "AISAIC_chr_" + chr + ".png";
-                    AisaicPlot p = createAisaicPlotObjectFromDataFiles(chr,
-                            ampFile, delFile);
-                    p.plot();
-                    p.saveChartAsPNG(figureFileName);
+                    File af = new File(ampFile);
+                    File df = new File(delFile);
+                    if(af.exists() || df.exists()) {
+                        AisaicPlot p = createAisaicPlotObjectFromDataFiles(chr,
+                                ampFile, delFile);
+                        p.plot();
+                        p.saveChartAsPNG(figureFileName);
+                    }
                 }
             }
             else if ( saicPara.getAnalysisMode() == 2){
@@ -1911,10 +1927,14 @@ public class AisaicGUI extends javax.swing.JFrame {
                 String delFile = DATA_PATH + FILE_PREFIX_GENOME + DEL_FILE_SUFFIX;
                 String figureFileName = FIG_PATH + "AISAIC_genome.png";
                 String genome = "genome";
-                AisaicPlot p = createAisaicPlotObjectFromDataFiles(genome,
-                        ampFile, delFile);
-                p.plot();
-                p.saveChartAsPNG(figureFileName);
+                File af = new File(ampFile);
+                File df = new File(delFile);
+                if(af.exists() || df.exists()) {
+                    AisaicPlot p = createAisaicPlotObjectFromDataFiles(genome,
+                            ampFile, delFile);
+                    p.plot();
+                    p.saveChartAsPNG(figureFileName);
+                }
             }
             
            
