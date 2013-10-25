@@ -144,74 +144,94 @@ public class AisaicPlot {
 	boolean[] isSignificantAmp = null;
 	boolean[] isSignificantDel = null;
         
-
-
-	BufferedReader reader = null;
-	try {
-	    String line;
-	    reader = new BufferedReader(new FileReader(ampFile));
-	    int numLine = 0;
-	    while ((line = reader.readLine()) != null) {
-		    numLine ++;
-	    }
-
-	    cnAmp = new double[numLine];
-	    loc = new int[numLine];
-	    isSignificantAmp = new boolean[numLine];
-
-	    reader = new BufferedReader(new FileReader(ampFile));
-	    for (int i = 0; i < numLine; i ++ ) {
-		line = reader.readLine();
-		String[] elements = line.split("\t");
-		cnAmp[i] = Double.parseDouble(elements[0]);
-		loc[i] = i + 1;
-		isSignificantAmp[i] = Integer.parseInt(elements[1]) == 0? false : true;
-	    }
- 
-	} catch (IOException e) {
-	    e.printStackTrace();
-	} finally {
-	    try {
-		if (reader != null) {
-		    reader.close();
-		}
-	    } catch (IOException ex) {
-		ex.printStackTrace();
-	    }
-	}
-
-
-	try {
-	    String line;
-	    reader = new BufferedReader(new FileReader(delFile));
-	    int numLine = 0;
-	    while ((line = reader.readLine()) != null) {
-		    numLine ++;
-	    }
-
-	    cnDel = new double[numLine];
-	    isSignificantDel = new boolean[numLine];
-
-	    reader = new BufferedReader(new FileReader(delFile));
-	    for (int i = 0; i < numLine; i ++ ) {
-		line = reader.readLine();
-		String[] elements = line.split("\t");
-		cnDel[i] = Double.parseDouble(elements[0]);
-		isSignificantDel[i] = Integer.parseInt(elements[1]) == 0? false : true;
-	    }
- 
-	} catch (IOException e) {
-	    e.printStackTrace();
-	} finally {
-	    try {
-		if (reader != null) {
-		    reader.close();
-		}
-	    } catch (IOException ex) {
-		ex.printStackTrace();
-	    }
-	}
-
+        BufferedReader reader = null;
+        File af = new File(ampFile);
+        File df = new File(delFile);
+        
+        if(af.exists()) {
+            
+            
+            try {
+                String line;
+                reader = new BufferedReader(new FileReader(ampFile));
+                int numLine = 0;
+                while ((line = reader.readLine()) != null) {
+                    numLine ++;
+                }
+                
+                cnAmp = new double[numLine];
+                loc = new int[numLine];
+                isSignificantAmp = new boolean[numLine];
+                
+                reader = new BufferedReader(new FileReader(ampFile));
+                for (int i = 0; i < numLine; i ++ ) {
+                    line = reader.readLine();
+                    String[] elements = line.split("\t");
+                    cnAmp[i] = Double.parseDouble(elements[0]);
+                    loc[i] = i + 1;
+                    isSignificantAmp[i] = Integer.parseInt(elements[1]) == 0? false : true;
+                }
+                
+            } catch (IOException e) {
+                e.printStackTrace();
+            } finally {
+                try {
+                    if (reader != null) {
+                        reader.close();
+                    }
+                } catch (IOException ex) {
+                    ex.printStackTrace();
+                }
+            }
+        } else {
+            cnAmp = new double[1];
+            isSignificantAmp = new boolean[1];
+            cnAmp[0] = 0;
+            isSignificantAmp[0] = false;
+        }
+        
+        
+        if(df.exists()) {
+            
+            try {
+                String line;
+                reader = new BufferedReader(new FileReader(delFile));
+                int numLine = 0;
+                while ((line = reader.readLine()) != null) {
+                    numLine ++;
+                }
+                
+                cnDel = new double[numLine];
+                loc = new int[numLine];
+                isSignificantDel = new boolean[numLine];
+                
+                reader = new BufferedReader(new FileReader(delFile));
+                for (int i = 0; i < numLine; i ++ ) {
+                    line = reader.readLine();
+                    String[] elements = line.split("\t");
+                    cnDel[i] = Double.parseDouble(elements[0]);
+                    loc[i] = i + 1;
+                    isSignificantDel[i] = Integer.parseInt(elements[1]) == 0? false : true;
+                }
+                
+            } catch (IOException e) {
+                e.printStackTrace();
+            } finally {
+                try {
+                    if (reader != null) {
+                        reader.close();
+                    }
+                } catch (IOException ex) {
+                    ex.printStackTrace();
+                }
+            }
+        } else {
+            cnDel = new double[1];
+            isSignificantDel = new boolean[1];
+            cnDel[0] = 0;
+            isSignificantDel[0] = false;   
+        }
+        
         return new AisaicPlot(cnAmp, cnDel, loc, 
                 isSignificantAmp, isSignificantDel,
                 chr);
