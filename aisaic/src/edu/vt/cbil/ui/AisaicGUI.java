@@ -43,11 +43,21 @@ public class AisaicGUI extends javax.swing.JFrame {
     SwingAISAIC mySwingAISAIC;
     BacomParameters bacomPara;
     SaicParameters saicPara;
+    final String FIG_PATH = "." + File.separator + "results" + File.separator 
+            + "figures" + File.separator;
  
     
     /** Creates new form SAICGUI */
     public AisaicGUI() {
         initComponents();
+        jTextField6.setText("." + File.separator + "cdf" + File.separator + "GenomeWideSNP_6.cdf");
+        jTextField9.setText("." + File.separator + "annotation" + File.separator + "GenomeWideSNP_6_Annotation.csv");
+        jTextField4.setText("." + File.separator + "results");
+        jTextField8.setText("." + File.separator + "gene_reference" + File.separator + "geneReference.gene");
+        File figDir=new File(FIG_PATH);
+        if(!figDir.exists()){
+            figDir.mkdir();
+        }
     }
 
     /** This method is called from within the constructor to
@@ -431,6 +441,7 @@ public class AisaicGUI extends javax.swing.JFrame {
         jLabel9.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel9.setText("Gene reference file:");
 
+        jTextField8.setText("./gene_reference/geneReference.gene");
         jTextField8.setMaximumSize(new java.awt.Dimension(6, 20));
         jTextField8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -964,7 +975,7 @@ public class AisaicGUI extends javax.swing.JFrame {
                     .addComponent(jButton9))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(36, Short.MAX_VALUE))
+                .addContainerGap(44, Short.MAX_VALUE))
         );
 
         pack();
@@ -1458,11 +1469,9 @@ public class AisaicGUI extends javax.swing.JFrame {
                 double[] meanVal;
                 boolean[] isSignificant;
 
-                final String DATA_PATH = saicPara.getOutfileDir() + File.separator;
+                final String DATA_PATH = saicPara.getOutfileDir();
                 final String AMP_FILE_SUFFIX = "_ampAvgCNA";
                 final String DEL_FILE_SUFFIX = "_delAvgCNA";
-
-                final String FIG_PATH = DATA_PATH + "figures" + File.separator;
 
                 File figureDir = new File(FIG_PATH);
 
@@ -1878,8 +1887,7 @@ public class AisaicGUI extends javax.swing.JFrame {
             
             final String AMP_FILE_SUFFIX = "_ampAvgCNA";
             final String DEL_FILE_SUFFIX = "_delAvgCNA";         
-            final String FIG_PATH = DATA_PATH + "figures" + File.separator;
-
+            
             File figureDir = new File(FIG_PATH);
 
             // if the directory does not exist, create it
@@ -2478,11 +2486,10 @@ public class AisaicGUI extends javax.swing.JFrame {
 
     private void jMenuItemChr5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemChr5ActionPerformed
         // TODO add your handling code here:
-        final String DATA_PATH = saicPara.getOutfileDir() + File.separator;
-        final String FIG_PATH = DATA_PATH + "figures" + File.separator;
           
         String chr = "5";
         String figureFile = FIG_PATH + "AISAIC_chr_" + chr + ".png";
+        System.out.println(figureFile);
         try {
             Desktop.getDesktop().open(new File(figureFile));
         } catch (Exception e) {
@@ -2501,9 +2508,7 @@ public class AisaicGUI extends javax.swing.JFrame {
 
     private void jMenuItemChr1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemChr1ActionPerformed
         // TODO add your handling code here:
-        final String DATA_PATH = saicPara.getOutfileDir() + File.separator;
-        final String FIG_PATH = DATA_PATH + "figures" + File.separator;
-       
+        
         String chr = "1";
         String figureFile = FIG_PATH + "AISAIC_chr_" + chr + ".png";
         try {
@@ -2516,8 +2521,6 @@ public class AisaicGUI extends javax.swing.JFrame {
 
     private void jMenuItemChr2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemChr2ActionPerformed
         // TODO add your handling code here:
-        final String DATA_PATH = saicPara.getOutfileDir() + File.separator;
-        final String FIG_PATH = DATA_PATH + "figures" + File.separator;
                 
         String chr = "2";
         String figureFile = FIG_PATH + "AISAIC_chr_" + chr + ".png";
@@ -2531,8 +2534,6 @@ public class AisaicGUI extends javax.swing.JFrame {
 
     private void jMenuItemChr3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemChr3ActionPerformed
         // TODO add your handling code here:
-        final String DATA_PATH = saicPara.getOutfileDir() + File.separator;
-        final String FIG_PATH = DATA_PATH + "figures" + File.separator;
           
         String chr = "3";
         String figureFile = FIG_PATH + "AISAIC_chr_" + chr + ".png";
@@ -2545,8 +2546,6 @@ public class AisaicGUI extends javax.swing.JFrame {
 
     private void jMenuItemChr4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemChr4ActionPerformed
         // TODO add your handling code here:
-        final String DATA_PATH = saicPara.getOutfileDir() + File.separator;
-        final String FIG_PATH = DATA_PATH + "figures" + File.separator;
                        
         String chr = "4";
         String figureFile = FIG_PATH + "AISAIC_chr_" + chr + ".png";
@@ -2559,8 +2558,6 @@ public class AisaicGUI extends javax.swing.JFrame {
 
     private void jMenuItemChr6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemChr6ActionPerformed
         // TODO add your handling code here:
-        final String DATA_PATH = saicPara.getOutfileDir() + File.separator;
-        final String FIG_PATH = DATA_PATH + "figures" + File.separator;
           
         String chr = "6";
         String figureFile = FIG_PATH + "AISAIC_chr_" + chr + ".png";
@@ -2573,8 +2570,6 @@ public class AisaicGUI extends javax.swing.JFrame {
 
     private void jMenuItemChr7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemChr7ActionPerformed
         // TODO add your handling code here:
-        final String DATA_PATH = saicPara.getOutfileDir() + File.separator;
-        final String FIG_PATH = DATA_PATH + "figures" + File.separator;
           
         String chr = "7";
         String figureFile = FIG_PATH + "AISAIC_chr_" + chr + ".png";
@@ -2587,8 +2582,6 @@ public class AisaicGUI extends javax.swing.JFrame {
 
     private void jMenuItemChr8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemChr8ActionPerformed
         // TODO add your handling code here:
-        final String DATA_PATH = saicPara.getOutfileDir() + File.separator;
-        final String FIG_PATH = DATA_PATH + "figures" + File.separator;
           
         String chr = "8";
         String figureFile = FIG_PATH + "AISAIC_chr_" + chr + ".png";
@@ -2601,8 +2594,6 @@ public class AisaicGUI extends javax.swing.JFrame {
 
     private void jMenuItemChr9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemChr9ActionPerformed
         // TODO add your handling code here:
-        final String DATA_PATH = saicPara.getOutfileDir() + File.separator;
-        final String FIG_PATH = DATA_PATH + "figures" + File.separator;
           
         String chr = "9";
         String figureFile = FIG_PATH + "AISAIC_chr_" + chr + ".png";
@@ -2615,8 +2606,6 @@ public class AisaicGUI extends javax.swing.JFrame {
 
     private void jMenuItemChr10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemChr10ActionPerformed
         // TODO add your handling code here:
-        final String DATA_PATH = saicPara.getOutfileDir() + File.separator;
-        final String FIG_PATH = DATA_PATH + "figures" + File.separator;
           
         String chr = "10";
         String figureFile = FIG_PATH + "AISAIC_chr_" + chr + ".png";
@@ -2629,8 +2618,6 @@ public class AisaicGUI extends javax.swing.JFrame {
 
     private void jMenuItemChr11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemChr11ActionPerformed
         // TODO add your handling code here:
-        final String DATA_PATH = saicPara.getOutfileDir() + File.separator;
-        final String FIG_PATH = DATA_PATH + "figures" + File.separator;
           
         String chr = "11";
         String figureFile = FIG_PATH + "AISAIC_chr_" + chr + ".png";
@@ -2643,8 +2630,6 @@ public class AisaicGUI extends javax.swing.JFrame {
 
     private void jMenuItemChr12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemChr12ActionPerformed
         // TODO add your handling code here:
-        final String DATA_PATH = saicPara.getOutfileDir() + File.separator;
-        final String FIG_PATH = DATA_PATH + "figures" + File.separator;
           
         String chr = "12";
         String figureFile = FIG_PATH + "AISAIC_chr_" + chr + ".png";
@@ -2657,9 +2642,6 @@ public class AisaicGUI extends javax.swing.JFrame {
 
     private void jMenuItemChr13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemChr13ActionPerformed
         // TODO add your handling code here:
-        final String DATA_PATH = saicPara.getOutfileDir() + File.separator;
-        final String FIG_PATH = DATA_PATH + "figures" + File.separator;
-          
         String chr = "13";
         String figureFile = FIG_PATH + "AISAIC_chr_" + chr + ".png";
         try {
@@ -2671,8 +2653,6 @@ public class AisaicGUI extends javax.swing.JFrame {
 
     private void jMenuItemChr14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemChr14ActionPerformed
         // TODO add your handling code here:
-        final String DATA_PATH = saicPara.getOutfileDir() + File.separator;
-        final String FIG_PATH = DATA_PATH + "figures" + File.separator;
           
         String chr = "14";
         String figureFile = FIG_PATH + "AISAIC_chr_" + chr + ".png";
@@ -2685,8 +2665,6 @@ public class AisaicGUI extends javax.swing.JFrame {
 
     private void jMenuItemChr15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemChr15ActionPerformed
         // TODO add your handling code here:
-        final String DATA_PATH = saicPara.getOutfileDir() + File.separator;
-        final String FIG_PATH = DATA_PATH + "figures" + File.separator;
           
         String chr = "15";
         String figureFile = FIG_PATH + "AISAIC_chr_" + chr + ".png";
@@ -2699,8 +2677,6 @@ public class AisaicGUI extends javax.swing.JFrame {
 
     private void jMenuItemChr16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemChr16ActionPerformed
         // TODO add your handling code here:
-        final String DATA_PATH = saicPara.getOutfileDir() + File.separator;
-        final String FIG_PATH = DATA_PATH + "figures" + File.separator;
           
         String chr = "16";
         String figureFile = FIG_PATH + "AISAIC_chr_" + chr + ".png";
@@ -2713,8 +2689,6 @@ public class AisaicGUI extends javax.swing.JFrame {
 
     private void jMenuItemChr17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemChr17ActionPerformed
         // TODO add your handling code here:
-        final String DATA_PATH = saicPara.getOutfileDir() + File.separator;
-        final String FIG_PATH = DATA_PATH + "figures" + File.separator;
           
         String chr = "17";
         String figureFile = FIG_PATH + "AISAIC_chr_" + chr + ".png";
@@ -2727,8 +2701,6 @@ public class AisaicGUI extends javax.swing.JFrame {
 
     private void jMenuItemChr18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemChr18ActionPerformed
         // TODO add your handling code here:
-        final String DATA_PATH = saicPara.getOutfileDir() + File.separator;
-        final String FIG_PATH = DATA_PATH + "figures" + File.separator;
           
         String chr = "18";
         String figureFile = FIG_PATH + "AISAIC_chr_" + chr + ".png";
@@ -2741,8 +2713,6 @@ public class AisaicGUI extends javax.swing.JFrame {
 
     private void jMenuItemChr19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemChr19ActionPerformed
         // TODO add your handling code here:
-        final String DATA_PATH = saicPara.getOutfileDir() + File.separator;
-        final String FIG_PATH = DATA_PATH + "figures" + File.separator;
           
         String chr = "19";
         String figureFile = FIG_PATH + "AISAIC_chr_" + chr + ".png";
@@ -2755,8 +2725,6 @@ public class AisaicGUI extends javax.swing.JFrame {
 
     private void jMenuItemChr20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemChr20ActionPerformed
         // TODO add your handling code here:
-        final String DATA_PATH = saicPara.getOutfileDir() + File.separator;
-        final String FIG_PATH = DATA_PATH + "figures" + File.separator;
           
         String chr = "20";
         String figureFile = FIG_PATH + "AISAIC_chr_" + chr + ".png";
@@ -2769,8 +2737,6 @@ public class AisaicGUI extends javax.swing.JFrame {
 
     private void jMenuItemChr21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemChr21ActionPerformed
         // TODO add your handling code here:
-        final String DATA_PATH = saicPara.getOutfileDir() + File.separator;
-        final String FIG_PATH = DATA_PATH + "figures" + File.separator;
           
         String chr = "21";
         String figureFile = FIG_PATH + "AISAIC_chr_" + chr + ".png";
@@ -2783,8 +2749,6 @@ public class AisaicGUI extends javax.swing.JFrame {
 
     private void jMenuItemChr22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemChr22ActionPerformed
         // TODO add your handling code here:
-        final String DATA_PATH = saicPara.getOutfileDir() + File.separator;
-        final String FIG_PATH = DATA_PATH + "figures" + File.separator;
           
         String chr = "22";
         String figureFile = FIG_PATH + "AISAIC_chr_" + chr + ".png";
@@ -2797,8 +2761,6 @@ public class AisaicGUI extends javax.swing.JFrame {
 
     private void jMenuItemSingleChrVizActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemSingleChrVizActionPerformed
         // TODO add your handling code here:
-        final String DATA_PATH = saicPara.getOutfileDir() + File.separator;
-        final String FIG_PATH = DATA_PATH + "figures" + File.separator;
           
         String chr = "";
         String figureFile = FIG_PATH + "AISAIC_singleChr.png";
@@ -2811,8 +2773,6 @@ public class AisaicGUI extends javax.swing.JFrame {
 
     private void jMenuItemGenomeWideVizActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemGenomeWideVizActionPerformed
         // TODO add your handling code here:
-        final String DATA_PATH = saicPara.getOutfileDir() + File.separator;
-        final String FIG_PATH = DATA_PATH + "figures" + File.separator;
           
         String chr = "genome";
         String figureFile = FIG_PATH + "AISAIC_genome.png";
